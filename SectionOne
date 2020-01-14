@@ -1,0 +1,29 @@
+# Version control
+
+Version control is a software tool that used to manage different versions of files(usually source code), it helps us tracking the changes that have been made on these files
+
+# Why Version Control
+
+If you are developing a piece of software, there is changes in your code, my may need a previous change that you have made, or you make change accidentally and want to rollback your changes, version control do it easily.
+
+Another usage if you working in a team and they make different changes in different places in code or working on the same source code file, after the team finish his work you will need to take the changes that have been made by the whole team.
+
+One more thing suppose you have a stable version of your software need to go for production, you need two copies of your source code one for the stable version that goes for production that may need fixes to apply on it , and another version that your team working on to develop the rest of requirements.
+
+think in the previous scenarios what is the effort and time you need to do that manually, beside the possibility of making something wrong. Version control do all of this and more.
+
+# Types of Version Control Software
+
+Version control systems (VCS) divide into two main categories: Centralized and distributed VCS.
+
+Centralized version control system keep a single copy of  the repository (storage for your source code and all the changes history)  on a central server and all the changes is committed to that server, you can pull or push on that server, but the drawback in this type is the possibility of server frailer that have the repository so you don&#39;t have any tracking history of your work and in the worsts case you may lose the server itself, it&#39;s considered as a single point of failure such as Microsoft Team Foundation Server (TFS)
+
+Distributed version control system keep a full version of repository for each client(machine) so if you lost your connection with other clients you have your own repository that you can work on it until connected again to get pull changes of other people or push your own changes, an example of distributed VCS is Git.
+
+# Git
+
+Git is an open source distributed version control system, It&#39;s fast and easy to use. You can use git through command line or through any IDE that integrates with Git which enable you to execute all the commands through graphical user interface (GUI)  such as Microsoft visual studio or visual studio code.
+
+## How Git Works
+
+In this section I will explain the basic methodology of Git to handle manage files. If you have a directory that containing your source code, this directory is working directory where you keeping your physical files. Git  recognizes the files that it is modified but it is not in your repository yet which means you do not have a tracking history of your files and other members of the team cannot pull your changes, to move your files to the repository , you should first move these files to staging index that you can think of as a temp storage for files that you want to transfer to the repository, this staging give you the chance to rethink about the modifications that you want to transfer to your repository, you can unstage the changes you have made or commit it to the repository. After commit files or changes to the repository Git will keep track of these files and the changes that will occur in these files and create a full log of changes in these files. The following diagram show how Git works. we will have more details about this diagram in the next section.
